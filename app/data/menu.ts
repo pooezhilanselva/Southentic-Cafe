@@ -79,6 +79,7 @@ export const menu = {
     note: "Choose from a variety of 99 different dosas!",
     items: [
       { name: "Cheese Dosa", price: 100 },
+      { name: "rava Dosa", price: 200 },
     ],
   }
 };
