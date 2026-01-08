@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -20,6 +21,24 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-8"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex justify-center mb-6"
+          >
+            <div className="rounded-full bg-[#FAF7F2]">
+              <Image
+                src="/cafe-logo.jpeg"
+                alt="Southentic Cafe Logo"
+                width={200}
+                height={200}
+                className="rounded-full mix-blend-multiply"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
