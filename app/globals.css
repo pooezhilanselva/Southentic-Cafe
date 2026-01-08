@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-cafe-text/10;
+  }
+
+  body {
+    @apply bg-cafe-bg text-cafe-text antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Text shadow for readability */
+  .hero-text-shadow {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* === ABOUT SECTION - COFFEE MACHINE === */
+  .coffee-machine-container {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .coffee-machine-container:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  /* Responsive sizing */
+  @media (max-width: 1023px) {
+    .coffee-machine-container lord-icon {
+      width: 250px !important;
+      height: 250px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .coffee-machine-container lord-icon {
+      width: 220px !important;
+      height: 220px !important;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .coffee-machine-container lord-icon {
+      width: 180px !important;
+      height: 180px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coffee-machine-container {
+      transition: none;
+    }
+
+    .coffee-machine-container:hover {
+      transform: none;
+      filter: none;
+    }
+  }
+
+  /* === ORDER ONLINE SECTION - DELIVERY SCOOTER === */
+  .scooter-delivery-container {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: -10;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+  }
+
+  .scooter-delivery-container:hover {
+    opacity: 0.45;
+  }
+
+  /* Responsive sizing */
+  @media (max-width: 1023px) {
+    .scooter-delivery-container lord-icon {
+      width: 240px !important;
+      height: 240px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .scooter-delivery-container {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .scooter-delivery-container lord-icon {
+      width: 200px !important;
+      height: 200px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scooter-delivery-container {
+      transition: none;
+    }
+
+    .scooter-delivery-container:hover {
+      opacity: 0.35;
+    }
+  }
+}
