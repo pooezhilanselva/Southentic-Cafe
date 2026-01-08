@@ -23,38 +23,39 @@ export default function MenuTabs() {
       </Reveal>
 
       <Tabs defaultValue="breakfast" className="space-y-10">
-        <div className="flex justify-center">
-          <TabsList className="grid grid-cols-2 sm:inline-flex gap-1 bg-white p-1 h-auto w-full sm:w-auto max-w-md sm:max-w-none">
-          <TabsTrigger
-            value="breakfast"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
-          >
-            <Sunrise size={16} />
-            <span>Breakfast</span>
-          </TabsTrigger>
-          <TabsTrigger
-            value="chinese"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
-          >
-            <Flame size={16} />
-            <span>Chinese</span>
-          </TabsTrigger>
-          <TabsTrigger
-            value="momos"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
-          >
-            <Image src="/momo.png" width={16} height={16} alt="Momos" className="w-4 h-4" />
-            <span>Momos</span>
-          </TabsTrigger>
-          <TabsTrigger
-            value="varietyDosa"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
-          >
-            <ChefHat size={16} />
-            <span className="hidden sm:inline">99-Variety Dosa</span>
-            <span className="sm:hidden">99-Variety Dosa</span>
-          </TabsTrigger>
-        </TabsList>
+        <div className="w-full overflow-x-auto scrollbar-hide px-2">
+          <div className="flex justify-start sm:justify-center py-2">
+            <TabsList className="inline-flex gap-3 bg-transparent p-0 h-auto">
+              <TabsTrigger
+                value="breakfast"
+                className="group relative gap-2 text-sm flex items-center justify-center px-4 py-3 rounded-full bg-white/50 backdrop-blur-sm border border-cafe-text/10 text-cafe-text hover:bg-white/80 data-[state=active]:bg-cafe-accent data-[state=active]:text-white data-[state=active]:scale-105 data-[state=active]:shadow-[0_2px_12px_rgba(139,69,19,0.2)] data-[state=active]:border-cafe-accent transition-all duration-200 ease-out active:scale-100"
+              >
+                <Sunrise size={16} className="transition-transform duration-150 group-hover:-translate-y-px" />
+                <span>Breakfast</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="chinese"
+                className="group relative gap-2 text-sm flex items-center justify-center px-4 py-3 rounded-full bg-white/50 backdrop-blur-sm border border-cafe-text/10 text-cafe-text hover:bg-white/80 data-[state=active]:bg-cafe-accent data-[state=active]:text-white data-[state=active]:scale-105 data-[state=active]:shadow-[0_2px_12px_rgba(139,69,19,0.2)] data-[state=active]:border-cafe-accent transition-all duration-200 ease-out active:scale-100"
+              >
+                <Flame size={16} className="transition-transform duration-150 group-hover:-translate-y-px" />
+                <span>Chinese</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="momos"
+                className="group relative gap-2 text-sm flex items-center justify-center px-4 py-3 rounded-full bg-white/50 backdrop-blur-sm border border-cafe-text/10 text-cafe-text hover:bg-white/80 data-[state=active]:bg-cafe-accent data-[state=active]:text-white data-[state=active]:scale-105 data-[state=active]:shadow-[0_2px_12px_rgba(139,69,19,0.2)] data-[state=active]:border-cafe-accent transition-all duration-200 ease-out active:scale-100"
+              >
+                <Image src="/momo.png" width={16} height={16} alt="Momos" className="w-4 h-4 transition-transform duration-150 group-hover:-translate-y-px" />
+                <span>Momos</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="varietyDosa"
+                className="group relative gap-2 text-sm flex items-center justify-center px-4 py-3 rounded-full bg-white/50 backdrop-blur-sm border border-cafe-text/10 text-cafe-text hover:bg-white/80 data-[state=active]:bg-cafe-accent data-[state=active]:text-white data-[state=active]:scale-105 data-[state=active]:shadow-[0_2px_12px_rgba(139,69,19,0.2)] data-[state=active]:border-cafe-accent transition-all duration-200 ease-out active:scale-100"
+              >
+                <ChefHat size={16} className="transition-transform duration-150 group-hover:-translate-y-px" />
+                <span>99-Variety Dosa</span>
+              </TabsTrigger>
+            </TabsList>
+          </div>
         </div>
 
         {/* Breakfast */}
