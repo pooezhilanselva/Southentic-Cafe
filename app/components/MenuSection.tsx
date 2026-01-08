@@ -28,9 +28,9 @@ export function MenuSection({
       <div className="space-y-2">
         {items.map((item, index) => (
           <div key={index}>
-            <div className="flex items-center justify-between text-base py-2">
-              <span className="text-cafe-text font-semibold">{item.name}</span>
-              <span className="text-cafe-text/40 ml-4">₹{item.price}</span>
+            <div className="flex items-center justify-between text-sm sm:text-base py-2 gap-2 sm:gap-4">
+              <span className="text-cafe-text font-semibold flex-1 min-w-0 break-words">{item.name}</span>
+              <span className="text-cafe-text/40 flex-shrink-0 whitespace-nowrap text-sm sm:text-base">₹{item.price}</span>
             </div>
             {index < items.length - 1 && (
               <Separator className="opacity-40" />
