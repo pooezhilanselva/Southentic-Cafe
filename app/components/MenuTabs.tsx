@@ -23,37 +23,36 @@ export default function MenuTabs() {
       </Reveal>
 
       <Tabs defaultValue="breakfast" className="space-y-10">
-        <div className="flex justify-center overflow-x-auto pb-2">
-          <TabsList className="inline-flex gap-1 bg-white p-1 h-auto w-auto min-w-min">
+        <div className="flex justify-center">
+          <TabsList className="grid grid-cols-2 sm:inline-flex gap-1 bg-white p-1 h-auto w-full sm:w-auto max-w-md sm:max-w-none">
           <TabsTrigger
             value="breakfast"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-1 sm:gap-2 text-xs sm:text-sm whitespace-nowrap px-3 sm:px-4"
+            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
           >
-            <Sunrise size={14} className="sm:w-4 sm:h-4" />
-            <span className="hidden sm:inline">Breakfast</span>
-            <span className="sm:hidden">Break.</span>
+            <Sunrise size={16} />
+            <span>Breakfast</span>
           </TabsTrigger>
           <TabsTrigger
             value="chinese"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-1 sm:gap-2 text-xs sm:text-sm whitespace-nowrap px-3 sm:px-4"
+            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
           >
-            <Flame size={14} className="sm:w-4 sm:h-4" />
-            Chinese
+            <Flame size={16} />
+            <span>Chinese</span>
           </TabsTrigger>
           <TabsTrigger
             value="momos"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-1 sm:gap-2 text-xs sm:text-sm whitespace-nowrap px-3 sm:px-4"
+            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
           >
-            <Image src="/momo.png" width={14} height={14} alt="Momos" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            Momos
+            <Image src="/momo.png" width={16} height={16} alt="Momos" className="w-4 h-4" />
+            <span>Momos</span>
           </TabsTrigger>
           <TabsTrigger
             value="varietyDosa"
-            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-1 sm:gap-2 text-xs sm:text-sm whitespace-nowrap px-3 sm:px-4"
+            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2 text-sm flex items-center justify-center"
           >
-            <ChefHat size={14} className="sm:w-4 sm:h-4" />
+            <ChefHat size={16} />
             <span className="hidden sm:inline">99-Variety Dosa</span>
-            <span className="sm:hidden">Dosa</span>
+            <span className="sm:hidden">99-Variety Dosa</span>
           </TabsTrigger>
         </TabsList>
         </div>
