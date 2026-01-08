@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
 export default function PopularMenu() {
+  const popularItems = [
+    { name: "Masala Dosa", price: 60 },
+    { name: "Ghee Roast Dosa", price: 70 },
+    { name: "Podi Masala Dosa", price: 80 },
+    { name: "Set Dosa", price: 70 },
+    { name: "Rava Dosa", price: 70 },
+    { name: "Cheese Dosa", price: 100 },
+  ];
+
   return (
     <section id="menu" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
