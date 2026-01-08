@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { popularItems } from "@/app/data/menu";
 
 export default function PopularMenu() {
   return (
